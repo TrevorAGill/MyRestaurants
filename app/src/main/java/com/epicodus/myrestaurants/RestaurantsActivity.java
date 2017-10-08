@@ -19,6 +19,6 @@ public class RestaurantsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
         //3. change what the display text int the layout says
-        mlocationTextView.setText("All restaurants near " + location);
+        mlocationTextView.setText("Here are all the restaurants near: " + location);
     }
 }
