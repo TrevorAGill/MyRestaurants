@@ -1,12 +1,15 @@
 package com.epicodus.myrestaurants;
 
 import android.content.Context;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
 import android.widget.ArrayAdapter;
 
 public class MyRestaurantsArrayAdapter extends ArrayAdapter {
     private Context mContext;
     private String[] mRestaurants;
     private String[] mCuisines;
+
 
     public MyRestaurantsArrayAdapter(Context mContext, int resource, String[] mRestaurants, String[] mCuisines) {
         super(mContext, resource);
