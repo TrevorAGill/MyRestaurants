@@ -13,6 +13,15 @@
         <!--android:scaleType="centerCrop"-->
         <!--app:srcCompat="@drawable/background" />-->
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/rsz_1background" />
+
     <TextView
         android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
@@ -40,12 +49,13 @@
         android:id="@+id/locationEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/findRestaurantsButton"
-        android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="text"
         android:hint="Enter Zip Code"
         android:padding="5dp"
-        android:background="@color/colorTextIcons"/>
+        android:background="@color/colorTextIcons"
+        android:layout_above="@+id/findRestaurantsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp" />
 
 </RelativeLayout>
