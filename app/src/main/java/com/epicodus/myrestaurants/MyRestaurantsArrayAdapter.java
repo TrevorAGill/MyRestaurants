@@ -5,29 +5,31 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.widget.ArrayAdapter;
 
+import java.util.ArrayList;
+
 public class MyRestaurantsArrayAdapter extends ArrayAdapter {
     private Context mContext;
-    private String[] mRestaurants;
+    private ArrayList<String> mRestaurants;
     private String[] mCuisines;
 
 
-    public MyRestaurantsArrayAdapter(Context mContext, int resource, String[] mRestaurants, String[] mCuisines) {
+    public MyRestaurantsArrayAdapter(Context mContext, int resource, ArrayList mRestaurants, String[] mCuisines) {
         super(mContext, resource);
         this.mContext = mContext;
         this.mRestaurants = mRestaurants;
         this.mCuisines = mCuisines;
     }
 
-    @Override
-    public Object getItem(int position) {
-        String restaurant = mRestaurants[position];
-        String cuisine = mCuisines[position];
-        return String.format("%s \nServes great: %s", restaurant, cuisine);
-    }
+//    @Override
+//    public Object getItem(int position) {
+//        String restaurant = mRestaurants[position];
+//        String cuisine = mCuisines[position];
+//        return String.format("%s \nServes great: %s", restaurant, cuisine);
+//    }
 
     @Override
     public int getCount() {
-        return mRestaurants.length;
+        return mRestaurants.size();
     }
 
 }
