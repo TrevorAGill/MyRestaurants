@@ -19,8 +19,7 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/rsz_1background" />
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/appNameTextView"
