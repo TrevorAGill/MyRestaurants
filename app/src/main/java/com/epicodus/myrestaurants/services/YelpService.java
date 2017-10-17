@@ -1,4 +1,6 @@
-package com.epicodus.myrestaurants;
+package com.epicodus.myrestaurants.services;
+
+import com.epicodus.myrestaurants.Constants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
