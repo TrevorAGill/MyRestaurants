@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.epicodus.myrestaurants.R;
 import com.epicodus.myrestaurants.adapters.RestaurantListAdapter;
@@ -26,13 +23,13 @@ import okhttp3.Response;
 
 //import static com.epicodus.myrestaurants.R.id.listView;
 
-public class RestaurantsActivity extends AppCompatActivity {
+public class RestaurantListActivity extends AppCompatActivity {
     //1. declare a new variable that will hold the layout's display text element in step 2
     @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
     private RestaurantListAdapter mAdapter;
 
     public ArrayList<Restaurant> restaurants = new ArrayList<>();
-    public static final String TAG = RestaurantsActivity.class.getSimpleName();
+    public static final String TAG = RestaurantListActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +55,7 @@ public class RestaurantsActivity extends AppCompatActivity {
             public void onResponse(Call call, Response response) {
                 restaurants = yelpService.processResults(response);
 
-                RestaurantsActivity.this.runOnUiThread(new Runnable() {
+                RestaurantListActivity.this.runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
@@ -66,7 +63,7 @@ public class RestaurantsActivity extends AppCompatActivity {
                         Log.i("RestuarantsActivity", "inside of run" + mAdapter);
                         mRecyclerView.setAdapter(mAdapter);
                         RecyclerView.LayoutManager layoutManager =
-                                new LinearLayoutManager(RestaurantsActivity.this);
+                                new LinearLayoutManager(RestaurantListActivity.this);
                         mRecyclerView.setLayoutManager(layoutManager);
                         mRecyclerView.setHasFixedSize(true);
                     }

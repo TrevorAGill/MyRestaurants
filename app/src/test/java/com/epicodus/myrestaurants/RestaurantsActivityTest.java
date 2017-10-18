@@ -3,7 +3,7 @@ package com.epicodus.myrestaurants;
 import android.os.Build;
 import android.widget.ListView;
 
-import com.epicodus.myrestaurants.ui.RestaurantsActivity;
+import com.epicodus.myrestaurants.ui.RestaurantListActivity;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,12 +19,12 @@ import static junit.framework.Assert.assertNotNull;
 @RunWith(RobolectricGradleTestRunner.class)
 
 public class RestaurantsActivityTest {
-    private RestaurantsActivity activity;
+    private RestaurantListActivity activity;
     private ListView mRestaurantListView;
 
     @Before
     public void setup() {
-        activity = Robolectric.setupActivity(RestaurantsActivity.class);
+        activity = Robolectric.setupActivity(RestaurantListActivity.class);
         mRestaurantListView = (ListView) activity.findViewById(R.id.listView);
     }
 
